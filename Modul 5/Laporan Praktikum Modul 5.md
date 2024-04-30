@@ -1,9 +1,55 @@
-# <h1 align="center">Laporan Praktikum Modul Searching</h1>
+# <h1 align="center">Laporan Praktikum Modul Struct dan Implementasi</h1>
 <p align="center">Rizal Wahyu Pratama</p>
 <p align="center">2311110029</p>
 
+## Tujuan Praktikum
+
+1. Mahasiswa mampu menjelaskan konsep struktur (struct) 
+2. Mahasiswa mampu menerapkan struct kedalam pemrograman 
+3. Mahasiswa mampu menerapkan array pada struct
+
 ## Dasar Teori
 
+Mata kuliah algoritma dan struktur data merupakan salah satu mata kuliah yang diajarkan pada banyak program studi ilmu komputer dan data (Arif Aliyanto). Struktur dari data cukup abstrak sehingga cukup sulit untuk dipahami oleh manusia, oleh karena itu kita dapat mengoperasikannya dalam sebuah pemrograman komputer. Untuk mengoperasikannya di dalam komputer, kita harus memahami apa itu algoritma dan struktur atau struct. 
+
+Pemrograman adalah komponen-komponen yang berkaitan dalam proses pembuatan program, misalnya seperti langkah, bahasa, tahapan pembuatan (Cici Wulandari). Dalam konteks pemrograman, struct merupakan tipe data bentukan yang terdiri dari beberapa tipe data standar atau tipe dengan bentuk lainnya. Untuk mendeklarasikan struktur kita dapat menggunakan berbagai bahasa pemrograman, seperti C++. Dimana bahasa pemrograman C++ ini merupakan hybrid dari bahasa C (Luh Joni Erawati). Untuk menggunakan struct kita dapat menggunakan berbagai kode diantaranya:
+
+```C++
+//Contoh Struct 1
+
+struct {   
+string namaDepan;  
+string namaBelakang; 
+int usia; 
+char jenis_kelamin; 
+}namaVariabelStrukA, namaVariabelStrukB;
+
+````
+
+
+```C++
+//Contoh Struct 2
+
+struct namaTipe{ 
+string namaDepan; 
+string namaTengah; 
+string namaBelakang; 
+}; struct namaTipe namaVariabelStrukA, namaVariabelStrukB;
+```
+
+
+```C++
+//Contoh Struct 3
+
+typedef struct { 
+string namaDepan; 
+string namaTengah; 
+string namaBelakang; 
+}namaTipe; 
+namaTipe namaVariabelStrukA, namaVariabelStrukB; 
+```
+
+Dari ketiga contoh struct di atas, kita dapat memilihnya salah satu sesuai dengan kebutuhan, kondisi, serta studi kasus.
 
 ## Guided 
 
@@ -12,31 +58,7 @@
 #### Buatlah sebuah project dengan menggunakan sequential search sederhana untuk melakukan pencarian data. .
 
 ```C++
-#include <iostream> 
-using namespace std;
 
-int main(){ 
-    int n = 10; 
-    int data[n] = {9, 4, 1, 7, 5, 12, 4, 13, 4, 10}; 
-    int cari = 10; 
-    bool ketemu = false; 
-    int i; 
-    // algoritma Sequential Search 
-    for (i = 0; i < n; i++){ 
-        if(data[i] == cari){ 
-            ketemu = true; 
-            break; 
-        } 
-    } 
-        cout << "\t Program Sequential Search Sederhana\n" << endl ;
-        cout << " data: {9, 4, 1, 7, 5, 12, 4, 13, 4, 10}"<< endl; 
-    if (ketemu){ 
-        cout << "\n angka "<< cari << " ditemukan pada indeks ke-" << i << endl ;
-    } else { 
-        cout << cari << " tidak dapat ditemukan pada data." << endl ; 
-    } 
-    return 0;
-}
 ```
 
 **Penjelasan:**
@@ -53,12 +75,7 @@ Library iostream digunakan untuk menjalankan operasi input dan output pada progr
 #### Bagian 2
 
 ```C++
-int main(){ 
-    int n = 10; 
-    int data[n] = {9, 4, 1, 7, 5, 12, 4, 13, 4, 10}; 
-    int cari = 10; 
-    bool ketemu = false; 
-    int i; 
+
 ```
 
 Fungsi main() ini merupakan fungsi utama dan pertama di eksekusi dalam program. Pada kode ini terdapat variabel 'n' yang dapat menyimpan jumlah elemen dalam array 'data'. Variabel 'cari' akan menyimpan angka yang akan dicari dalam array. Berikutnya untuk variabel 'ketemu' akan bertipe boolean yang digunakan untuk menandai apakah angka yang dicari ditemukan atau tidak.
@@ -66,13 +83,7 @@ Fungsi main() ini merupakan fungsi utama dan pertama di eksekusi dalam program. 
 #### Bagian 3
 
 ```C++
-// algoritma Sequential Search 
-    for (i = 0; i < n; i++){ 
-        if(data[i] == cari){ 
-            ketemu = true; 
-            break; 
-        } 
-    } 
+
 ```
 
 Pada kode di atas kita menggunakan loop for untuk melakukan pencarian sekuensial.
@@ -80,8 +91,7 @@ Pada kode di atas kita menggunakan loop for untuk melakukan pencarian sekuensial
 #### Bagian 4
 
 ```C++
-        cout << "\t Program Sequential Search Sederhana\n" << endl ;
-        cout << " data: {9, 4, 1, 7, 5, 12, 4, 13, 4, 10}"<< endl; 
+    
 ```
 
 Kode di atas merupakan bagian output yang memberikan luaran dari kode yang telah dituliskan.
