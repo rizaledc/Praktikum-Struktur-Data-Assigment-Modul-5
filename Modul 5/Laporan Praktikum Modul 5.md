@@ -55,10 +55,54 @@ Dari ketiga contoh struct di atas, kita dapat memilihnya salah satu sesuai denga
 
 ### 1. Guided 1
 
-#### Buatlah sebuah project dengan menggunakan sequential search sederhana untuk melakukan pencarian data. .
+#### 
 
 ```C++
+#include <iostream>
+#include <string>
 
+using namespace std;
+
+struct Buku {
+string judul_buku;
+string pengarang;
+string penerbit;
+int tebal_buku;
+double harga_buku;
+}; Buku buku1, buku2;
+
+int main(){ //fungsi program utama
+    buku1.judul_buku = "Cinta Berliku, Hingga Bertemu Kamu";
+	buku1.pengarang = "Rizal Wahyu";
+	buku1.penerbit = "Sinar Budi";
+	buku1.tebal_buku = 515;
+	buku1.harga_buku = 150000;
+	
+	buku2.judul_buku = "Perjalanan Seorang Starboy";
+	buku2.pengarang = "Pratama Rizal";
+	buku2.penerbit = "PLH Entertain";
+	buku2.tebal_buku = 276;
+	buku2.harga_buku = 200000;
+	
+	//menampilkan data 
+	cout << "Informasi Buku 1\n" << endl;
+	cout << "Informasi Buku 1" << endl;
+	cout << "Judul : "<< buku1.judul_buku << endl;
+	cout << "Pengarang : "<< buku1.pengarang << endl;
+	cout << "Penerbit : "<< buku1.penerbit << endl;
+	cout << "tebal_buku : "<< buku1.tebal_buku << endl;
+	cout << "harga_buku : "<< buku1.harga_buku << endl;
+
+	//menampilkan data
+	cout << "Informasi Buku 2\n" << endl;
+	cout << "Judul : "<< buku2.judul_buku << endl;
+	cout << "Pengarang : "<< buku2.pengarang << endl;
+	cout << "Penerbit : "<< buku2.penerbit << endl;
+	cout << "tebal_buku : "<< buku2.tebal_buku << endl;
+	cout << "harga_buku : "<< buku2.harga_buku << endl;
+	
+	return 0;
+	}
 ```
 
 **Penjelasan:**
@@ -70,141 +114,173 @@ Dari ketiga contoh struct di atas, kita dapat memilihnya salah satu sesuai denga
 using namespace std;
 ```
 
-Library iostream digunakan untuk menjalankan operasi input dan output pada program. Lalu namespace std dipanggil agar saat penulisan fungsi tidak perlu ditambahkan std lagi.
+Library iostream digunakan untuk menjalankan operasi input dan output pada program. Library string digunakan untuk pengolahan serta manipulasi data string dalam program. Lalu namespace std dipanggil agar saat penulisan fungsi tidak perlu ditambahkan std lagi.
 
 #### Bagian 2
 
 ```C++
-
+struct Buku {
+    string judul_buku;
+    string pengarang;
+    string penerbit;
+    int tebal_buku;
+    double harga_buku;
+};Buku buku1, buku2;
 ```
 
-Fungsi main() ini merupakan fungsi utama dan pertama di eksekusi dalam program. Pada kode ini terdapat variabel 'n' yang dapat menyimpan jumlah elemen dalam array 'data'. Variabel 'cari' akan menyimpan angka yang akan dicari dalam array. Berikutnya untuk variabel 'ketemu' akan bertipe boolean yang digunakan untuk menandai apakah angka yang dicari ditemukan atau tidak.
+Kode di atas digunakan untuk mendeklarasikan struct, dimana struct dengan nama buku memiliki 5 bagian dengan tipe data yang berbeda-beda.
 
 #### Bagian 3
 
 ```C++
+int main() {
+buku1.judul_buku = "Cinta Berliku, Hingga Bertemu Kamu";
+buku1.pengarang = "Rizal Wahyu";
+buku1.penerbit = "Sinar Budi";
+buku1.tebal_buku = 515;
+buku1.harga_buku = 150000;
 
-```
+buku2.judul_buku = "Perjalanan Seorang Starboy";
+buku2.pengarang = "Pratama Rizal";
+buku2.penerbit = "PLH Entertain";
+buku2.tebal_buku = 276;
+buku2.harga_buku = 200000;
 
-Pada kode di atas kita menggunakan loop for untuk melakukan pencarian sekuensial.
+cout << "Informasi Buku 1\n" << endl;
+cout << "Informasi Buku 1" << endl;
+cout << "Judul : "<< buku1.judul_buku << endl;
+cout << "Pengarang : "<< buku1.pengarang << endl;
+cout << "Penerbit : "<< buku1.penerbit << endl;
+cout << "tebal_buku : "<< buku1.tebal_buku << endl;
+cout << "harga_buku : "<< buku1.harga_buku << endl;
 
-#### Bagian 4
+// Outputting data for buku2
+cout << "Informasi Buku 2\n" << endl;
+cout << "Judul : "<< buku2.judul_buku << endl;
+cout << "Pengarang : "<< buku2.pengarang << endl;
+cout << "Penerbit : "<< buku2.penerbit << endl;
+cout << "tebal_buku : "<< buku2.tebal_buku << endl;
+cout << "harga_buku : "<< buku2.harga_buku << endl;
 
-```C++
-    
-```
-
-Kode di atas merupakan bagian output yang memberikan luaran dari kode yang telah dituliskan.
-
-#### Bagian 5
-
-```C++
-    if (ketemu){ 
-        cout << "\n angka "<< cari << " ditemukan pada indeks ke-" << i << endl ;
-    } else { 
-        cout << cari << " tidak dapat ditemukan pada data." << endl ; 
-    } 
     return 0;
+}
 ```
 
-Kode di atas menggunakan if dan else untuk mengecek nilai dari variabel 'ketemu'. Jika 'ketemu' bernilai True maka angka ditemukan dalam array. Namun, jika 'ketemu' bernilai False maka angka tidak ditemukan dalam array.
+Kode di atas merupakan kode fungsi main yang merupakan fungsi utama dalam sebuah program. Fungsi ini akan dieksekusi pertama serta terurut sesuai dengan perintahnya. Pertama seorang programer akan mendeklarasikan serta mengisi masing-masing variabel dengan valuenya, lalu setelah diberi value. Programer dapat mencetak hasilnya sesuai dengan kode di atas.
 
 #### Output :
 
 ```C++
-Program Sequential Search Sederhana
+Informasi Buku 1
+Judul : Cinta Berliku, Hingga Bertemu Kamu
+Pengarang : Rizal Wahyu
+Penerbit : Sinar Budi
+tebal_buku : 515
+harga_buku : 150000
+Informasi Buku 2
 
- data: {9, 4, 1, 7, 5, 12, 4, 13, 4, 10}
-
- angka 10 ditemukan pada indeks ke-9
+Judul : Perjalanan Seorang Starboy
+Pengarang : Pratama Rizal
+Penerbit : PLH Entertain
+tebal_buku : 276
+harga_buku : 200000
 ```
 
 **Penjelasan:**
 
-Program di atas akan mengeluarkan output pesan singkat di awal program, lalu akan memunculkan data yang ada dan memberitahu angka yang ditemukan berada pada indeks ke berapa.
+Program di atas akan mengeluarkan output pesan yang menyatakan informasi dari buku 1 dan buku 2. Mulai dari judul, pengarang, penerbit, tebal buku, dan harga buku.
 
 #### Full Code Screenshot
 
 <p align="center">
-  <img src="https://github.com/rizaledc/Praktikum-Struktur-Data-Assigment-Modul-4/blob/main/Modul%204/Screenshot/Guided1.png" alt="Alt Text">
+  <img src="https://github.com/rizaledc/Praktikum-Struktur-Data-Assigment-Modul-5/blob/main/Modul%205/SS/codeguided1.png" alt="Alt Text">
 </p>
 
 #### Screenshot Output
 
 <p align="center">
-  <img src="https://github.com/rizaledc/Praktikum-Struktur-Data-Assigment-Modul-4/blob/main/Modul%204/Screenshot/OutGuided1.png" alt="Alt Text">
+  <img src="https://github.com/rizaledc/Praktikum-Struktur-Data-Assigment-Modul-5/blob/main/Modul%205/SS/OutG1.png" alt="Alt Text">
 </p>
 
 ### 2. Guided 2
-#### Buatlah sebuah project untuk melakukan pencarian data dengan menggunakan Binary Search
+
+#### 
 
 ```C++
 #include <iostream>
-#include <iomanip>
-
+#include <string>
 using namespace std;
 
-int bil_data[7] = {1, 8, 2, 5, 4, 9, 7};
-int cari;
+struct hewan {
+    string nama_hewan;
+    string jenis_kelamin;
+    string kembangbiak;
+    string pernafasan;
+    string tempat_hidup;
+    bool karnivora;
+}; 
 
-void selection_sort() {
-    int temp, min, i, j;
-    for(i = 0; i < 7; i++) {
-        min = i;
-        for(j = i + 1; j < 7; j++) {
-            if(bil_data[j] < bil_data[min]) {
-                min = j;
-            }
-        }
-        temp = bil_data[i];
-        bil_data[i] = bil_data[min];
-        bil_data[min] = temp;
-    }
-}
+struct hewan_darat{
+    hewan info_hewan;
+    int jumlah_kaki;
+    bool apakah_menyusui;
+    string suara;
+};
+hewan_darat hewan1;
 
-void binary_search() {
-    int awal, akhir, tengah, b_flag = 0;
-    awal = 0;
-    akhir = 6;
-    while (b_flag == 0 && awal <= akhir) {
-        tengah = (awal + akhir) / 2;
-        if(bil_data[tengah] == cari) {
-            b_flag = 1;
-            break;
-        } else if(bil_data[tengah] < cari) {
-            awal = tengah + 1;
-        } else {
-            akhir = tengah - 1;
-        }
-    }
-    if(b_flag == 1) {
-        cout << "\n Data ditemukan pada index ke-" << tengah << endl;
-    } else {
-        cout << "\n Data tidak ditemukan\n";
-    }
-}
+struct hewan_laut{
+    hewan info_hewan;
+    string bentuk_sirip;
+    string pertahanan_diri;
+};
+hewan_laut hewan2;
 
 int main() {
-    cout << "\t BINARY SEARCH\n";
-    cout << "\n Data : ";
-    // tampilkan data awal
-    for(int x = 0; x < 7; x++) {
-        cout << setw(3) << bil_data[x];
-    }
-    cout << endl;
-    cout << "\n Masukkan data yang ingin Anda cari : ";
-    cin >> cari;
-    cout << "\n Data diurutkan : ";
-    // urutkan data dengan selection sort
-    selection_sort();
-    // tampilkan data setelah diurutkan
-    for(int x = 0; x < 7; x++) {
-        cout << setw(3) << bil_data[x];
-    }
-    cout << endl;
-    binary_search();
-    return 0;
-}
+    hewan1.info_hewan.nama_hewan = "Anjing";
+    hewan1.info_hewan.jenis_kelamin = "Laki-laki";
+    hewan1.info_hewan.kembangbiak = "Melahirkan";
+    hewan1.info_hewan.pernafasan = "Paru paru";
+    hewan1.info_hewan.tempat_hidup = "Darat";
+    hewan1.info_hewan.karnivora = true;
+    hewan1.jumlah_kaki = 4;
+    hewan1.apakah_menyusui = true;   
+    hewan1.suara = "Rawrr, guk, guk,guk";
+    
+    hewan2.info_hewan.nama_hewan = "Paus";
+    hewan2.info_hewan.jenis_kelamin = "Perempuan";
+    hewan2.info_hewan.kembangbiak = "Melahirkan";
+    hewan2.info_hewan.pernafasan = "paru paru";
+    hewan2.info_hewan.tempat_hidup = "Perairan (Laut)";
+    hewan2.info_hewan.karnivora = false;
+    hewan2.bentuk_sirip = "dosal, sabit, dan gumpalan";
+    hewan2.pertahanan_diri = " Menghirup Oksigen di udara";   
+
+	//menampilkan data 
+	cout << "\t Hewan Darat" << endl;
+	cout << "Nama Hewan :" <<hewan1.info_hewan.nama_hewan << endl;
+	cout << "Jenis Kelamin : "<<hewan1.info_hewan.jenis_kelamin << endl;
+	cout << "Kembangbiak : "<< hewan1.info_hewan.kembangbiak << endl;
+	cout << "Pernapasan : "<< hewan1.info_hewan.pernafasan << endl;
+	cout << "Tempat Hidup : "<< hewan1.info_hewan.tempat_hidup << endl;
+	cout << "karnivora : "<< hewan1.info_hewan.karnivora << endl;
+	cout << "jumlah kaki : "<< hewan1.jumlah_kaki << endl;
+	cout << "apakah menyusui?  : "<< hewan1.apakah_menyusui << endl;
+	cout << "suara : "<< hewan1.suara << "\n" << endl ;
+
+	//menampilkan data 
+	cout << "\t Hewan Laut" << endl;
+	cout << "Nama Hewan :" <<hewan2.info_hewan.nama_hewan << endl;
+	cout << "Jenis Kelamin : "<<hewan2.info_hewan.jenis_kelamin << endl;
+	cout << "Kembangbiak : "<< hewan2.info_hewan.kembangbiak << endl;
+	cout << "Pernapasan : "<< hewan2.info_hewan.pernafasan << endl;
+	cout << "Tempat Hidup : "<< hewan2.info_hewan.tempat_hidup << endl;
+	cout << "apakah karnivora? "<< hewan2.info_hewan.karnivora << endl;
+	cout << "bentuk sirip : "<< hewan2.bentuk_sirip << endl;
+	cout << "pertahanan diri : "<< hewan2.pertahanan_diri << endl;
+
+
+	return 0;
+	}
 ```
 
 **Penjelasan:**
@@ -213,188 +289,199 @@ int main() {
 
 ```C++
 #include <iostream>
-#include <iomanip>
+#include <string>
 
 using namespace std;
 ```
 
-Library iostream digunakan untuk menjalankan operasi input dan output pada program. iomanip digunakan untuk mengatur tampilan dari output dalam C++. Lalu namespace std dipanggil agar saat penulisan fungsi tidak perlu ditambahkan std lagi.
+Library iostream digunakan untuk menjalankan operasi input dan output pada program. Library string digunakan untuk memanipulasi dan mengolah data string. Lalu namespace std dipanggil agar saat penulisan fungsi tidak perlu ditambahkan std lagi.
 
 #### Bagian 2
 
 ```C++
-int bil_data[7] = {1, 8, 2, 5, 4, 9, 7};
-int cari;
+struct hewan {
+    string nama_hewan;
+    string jenis_kelamin;
+    string kembangbiak;
+    string pernafasan;
+    string tempat_hidup;
+    bool karnivora;
+}; 
+
+struct hewan_darat{
+    hewan info_hewan;
+    int jumlah_kaki;
+    bool apakah_menyusui;
+    string suara;
+};
+hewan_darat hewan1;
+
+struct hewan_laut{
+    hewan info_hewan;
+    string bentuk_sirip;
+    string pertahanan_diri;
+};
+hewan_laut hewan2;
 ```
 
-Menginisiasi array 'bil_data' yang berisi data angka. Lalu 'cari' untuk menyimpan data yang akan di cari.
+Pada kode di atas, didefinisikan 3 buah struct. Dimana struct yang pertama yaitu struct hewan yang merupakan struct inti dari dua struct setelahnya. Di dalam struct ini didefinisikan 5 variabel yang akan diisi dengan valuenya masing-masing. Berikutnya terdapat 2 struct turunan dari struct hewan yaitu struct hewan_darat dan struct hewan_laut sebagai tambahan informasi dari masing-masing jenis hewan.
 
 #### Bagian 3
 
 ```C++
-void selection_sort() {
-    int temp, min, i, j;
-    for(i = 0; i < 7; i++) {
-        min = i;
-        for(j = i + 1; j < 7; j++) {
-            if(bil_data[j] < bil_data[min]) {
-                min = j;
-            }
-        }
-        temp = bil_data[i];
-        bil_data[i] = bil_data[min];
-        bil_data[min] = temp;
-    }
-}
-```
-
-Kode di atas merupakan fungsi selection sort yang digunakan untuk mengurutkan data di dalam array 'bil_data' secara ascending atau dari kecil ke terbesar.
-
-#### Bagian 4
-
-```C++
-void binary_search() {
-    int awal, akhir, tengah, b_flag = 0;
-    awal = 0;
-    akhir = 6;
-    while (b_flag == 0 && awal <= akhir) {
-        tengah = (awal + akhir) / 2;
-        if(bil_data[tengah] == cari) {
-            b_flag = 1;
-            break;
-        } else if(bil_data[tengah] < cari) {
-            awal = tengah + 1;
-        } else {
-            akhir = tengah - 1;
-        }
-    }
-    if(b_flag == 1) {
-        cout << "\n Data ditemukan pada index ke-" << tengah << endl;
-    } else {
-        cout << "\n Data tidak ditemukan\n";
-    }
-}
-```
-
-Pada kode di atas, merupakan fungsi binary search yang digunakan untuk mencari data dalam array yang sudah ada. Cara kerjanya sama yaitu dengan membagi dua nilai array lalu melakukan kerja seperti halnya binary search.
-
-#### Bagian 5
-
-```C++
 int main() {
-    // Output judul program
-    cout << "\t BINARY SEARCH\n";
+    hewan1.info_hewan.nama_hewan = "Anjing";
+    hewan1.info_hewan.jenis_kelamin = "Laki-laki";
+    hewan1.info_hewan.kembangbiak = "Melahirkan";
+    hewan1.info_hewan.pernafasan = "Paru paru";
+    hewan1.info_hewan.tempat_hidup = "Darat";
+    hewan1.info_hewan.karnivora = true;
+    hewan1.jumlah_kaki = 4;
+    hewan1.apakah_menyusui = true;   
+    hewan1.suara = "Rawrr, guk, guk,guk";
     
-    // Output data awal
-    cout << "\n Data : ";
-    for(int x = 0; x < 7; x++) {
-        cout << setw(3) << bil_data[x];
-    }
-    cout << endl;
-    
-    // Input data yang akan dicari
-    cout << "\n Masukkan data yang ingin Anda cari : ";
-    cin >> cari;
-    
-    // Output data setelah diurutkan
-    cout << "\n Data diurutkan : ";
-    selection_sort();
-    for(int x = 0; x < 7; x++) {
-        cout << setw(3) << bil_data[x];
-    }
-    cout << endl;
-    
-    // Pencarian menggunakan Binary Search
-    binary_search();
-    return 0;
-}
+    hewan2.info_hewan.nama_hewan = "Paus";
+    hewan2.info_hewan.jenis_kelamin = "Perempuan";
+    hewan2.info_hewan.kembangbiak = "Melahirkan";
+    hewan2.info_hewan.pernafasan = "paru paru";
+    hewan2.info_hewan.tempat_hidup = "Perairan (Laut)";
+    hewan2.info_hewan.karnivora = false;
+    hewan2.bentuk_sirip = "dosal, sabit, dan gumpalan";
+    hewan2.pertahanan_diri = " Menghirup Oksigen di udara";   
+
+	//menampilkan data 
+	cout << "\t Hewan Darat" << endl;
+	cout << "Nama Hewan :" <<hewan1.info_hewan.nama_hewan << endl;
+	cout << "Jenis Kelamin : "<<hewan1.info_hewan.jenis_kelamin << endl;
+	cout << "Kembangbiak : "<< hewan1.info_hewan.kembangbiak << endl;
+	cout << "Pernapasan : "<< hewan1.info_hewan.pernafasan << endl;
+	cout << "Tempat Hidup : "<< hewan1.info_hewan.tempat_hidup << endl;
+	cout << "karnivora : "<< hewan1.info_hewan.karnivora << endl;
+	cout << "jumlah kaki : "<< hewan1.jumlah_kaki << endl;
+	cout << "apakah menyusui?  : "<< hewan1.apakah_menyusui << endl;
+	cout << "suara : "<< hewan1.suara << "\n" << endl ;
+
+	//menampilkan data 
+	cout << "\t Hewan Laut" << endl;
+	cout << "Nama Hewan :" <<hewan2.info_hewan.nama_hewan << endl;
+	cout << "Jenis Kelamin : "<<hewan2.info_hewan.jenis_kelamin << endl;
+	cout << "Kembangbiak : "<< hewan2.info_hewan.kembangbiak << endl;
+	cout << "Pernapasan : "<< hewan2.info_hewan.pernafasan << endl;
+	cout << "Tempat Hidup : "<< hewan2.info_hewan.tempat_hidup << endl;
+	cout << "apakah karnivora? "<< hewan2.info_hewan.karnivora << endl;
+	cout << "bentuk sirip : "<< hewan2.bentuk_sirip << endl;
+	cout << "pertahanan diri : "<< hewan2.pertahanan_diri << endl;
+
+
+	return 0;
+	}
 ```
 
-Fungsi di atas merupakan fungsi main atau fungsi utama dalam pemrograman, fungsi ini akan dieksekusi pertama kali dalam program mulai dari pesan "BINARY SEARCH" yang berada di tengah, lalu ada output data awal, lalu pengguna akan menginputkan data yang akan dicari, berikutnya ada output data setelah di urutkan, dan yang terakhir ada output pencarian menggunakan binary search. Data yang dicar8i akan diberikan pesan data ditemukan pada indeks ke berapa.
+Fungsi di atas merupakan fungsi main atau fungsi utama dalam pemrograman, fungsi ini akan dieksekusi pertama kali dalam program. Dimana programer akan mengisi masing-masing value dari variabel yang disediakan. Lalu programer akan membuat kode yang berupa output dari value-value yang telah di masukkan. Mulai dari hewan_darat sampai hewan_laut.
 
 #### Output:
 
 ```C++
-BINARY SEARCH
+Hewan Darat
+Nama Hewan :Anjing
+Jenis Kelamin : Laki-laki
+Kembangbiak : Melahirkan
+Pernapasan : Paru paru
+Tempat Hidup : Darat
+karnivora : 1
+jumlah kaki : 4
+apakah menyusui?  : 1
+suara : Rawrr, guk, guk,guk
 
- Data :   1  8  2  5  4  9  7
-
- Masukkan data yang ingin Anda cari : 8
-
- Data diurutkan :   1  2  4  5  7  8  9
-
- Data ditemukan pada index ke-5
+         Hewan Laut
+Nama Hewan :Paus
+Jenis Kelamin : Perempuan
+Kembangbiak : Melahirkan
+Pernapasan : paru paru
+Tempat Hidup : Perairan (Laut)
+apakah karnivora? 0
+bentuk sirip : dosal, sabit, dan gumpalan
+pertahanan diri :  Menghirup Oksigen di udara
 ```
 
 **Penjelasan:**
 
-Sesuai dengan fungsi main, output di atas urutannya telah di atur dalam fungsi main mulai dari output string BINARY SEARCH, data, lalu inputan data yang ingin dicari, berikutnya data yang diurutkan dan data ditemukan pada indeks ke-5, karena pengguna ingin mencari angka 8 yang setelah di urutkan berada pada indeks ke-5.
+Sesuai dengan fungsi main, output di atas urutannya telah di atur dalam fungsi main. Dimana output yang pertama tentunya akan berisi informasi dari jenis hewan darat, berikutnya akan berisi output dari jenis hewan laut. Output ini sesuai dengan value yang dimasukkan oleh programer ke dalam variabelnya.
 
 #### Full Code Screenshot
 
 <p align="center">
-  <img src="https://github.com/rizaledc/Praktikum-Struktur-Data-Assigment-Modul-4/blob/main/Modul%204/Screenshot/Guided2.png" alt="Alt Text">
+  <img src="https://github.com/rizaledc/Praktikum-Struktur-Data-Assigment-Modul-5/blob/main/Modul%205/SS/codeguided2.png" alt="Alt Text">
 </p>
 
 #### Screenshot Output
 
 <p align="center">
-  <img src="https://github.com/rizaledc/Praktikum-Struktur-Data-Assigment-Modul-4/blob/main/Modul%204/Screenshot/OutGuided2.png" alt="Alt Text">
+  <img src="https://github.com/rizaledc/Praktikum-Struktur-Data-Assigment-Modul-5/blob/main/Modul%205/SS/OutG2.png" alt="Alt Text">
 </p>
 
 ## Unguided 
 
 ### 1. Unguided 1
 
-#### Buatlah sebuah program untuk mencari sebuah huruf pada sebuah kalimat yang sudah di input dengan menggunakan Binary Search! 
+#### 
 
 **Kode Program:**
 
 ```C++
 #include <iostream>
-#include <algorithm>
 #include <string>
 
 using namespace std;
 
-// Fungsi untuk mencari sebuah huruf pada sebuah kalimat menggunakan Binary Search
-bool binarySearch(const string& sentence, char target) {
-    int left = 0;
-    int right = sentence.length() - 1;
-    
-    while (left <= right) {
-        int mid = left + (right - left) / 2;
+const int MAX_BUKU = 5;
 
-        if (sentence[mid] == target) {
-            return true; // Huruf ditemukan
-        } else if (sentence[mid] < target) {
-            left = mid + 1; // Cari di sebelah kanan
-        } else {
-            right = mid - 1; // Cari di sebelah kiri
-        }
-    }
+struct Buku {
+    string judul_buku;
+    string pengarang;
+    string penerbit;
+    int tebal_buku;
+    double harga_buku;
+    int tahun_terbit;
+};
 
-    return false; // Huruf tidak ditemukan
+// Fungsi untuk memasukkan data buku
+void tambahData(Buku &buku) {
+    cout << "Judul Buku: ";
+    getline(cin, buku.judul_buku);
+    cout << "Pengarang: ";
+    getline(cin, buku.pengarang);
+    cout << "Penerbit: ";
+    getline(cin, buku.penerbit);
+    cout << "Tebal Buku (halaman): ";
+    cin >> buku.tebal_buku;
+    cout << "Harga Buku: ";
+    cin >> buku.harga_buku;
+    cout << "Tahun Terbit: ";
+    cin >> buku.tahun_terbit;
+    cin.ignore(); // Membersihkan buffer input
 }
 
 int main() {
-    string sentence;
-    char target;
+    Buku daftar_buku[MAX_BUKU];
 
-    cout << "Masukkan kalimat: ";
-    getline(cin, sentence);
+    // Memasukkan data untuk setiap buku
+    for (int i = 0; i < MAX_BUKU; ++i) {
+        cout << "Masukkan data untuk Buku " << i + 1 << endl;
+        tambahData(daftar_buku[i]);
+        cout << endl;
+    }
 
-    // Melakukan sorting pada kalimat untuk memastikan binary search dapat berfungsi
-    sort(sentence.begin(), sentence.end());
-
-    cout << "Masukkan huruf yang ingin dicari: ";
-    cin >> target;
-
-    // Menggunakan binary search untuk mencari huruf
-    if (binarySearch(sentence, target)) {
-        cout << "Huruf '" << target << "' ditemukan dalam kalimat." << endl;
-    } else {
-        cout << "Huruf '" << target << "' tidak ditemukan dalam kalimat." << endl;
+    // Menampilkan data buku yang telah dimasukkan
+    cout << "Data Buku:"<<endl<<endl;
+    for (int i = 0; i < MAX_BUKU; ++i) {
+        cout << "Daftar Buku ke-" << i + 1 << endl;
+        cout << "Judul: " << daftar_buku[i].judul_buku << endl;
+        cout << "Pengarang: " << daftar_buku[i].pengarang << endl;
+        cout << "Penerbit: " << daftar_buku[i].penerbit << endl;
+        cout << "Tebal Buku: " << daftar_buku[i].tebal_buku << " halaman" << endl;
+        cout << "Harga Buku: Rp" << daftar_buku[i].harga_buku << endl;
+        cout << "Tahun Terbit: " << daftar_buku[i].tahun_terbit << endl << endl;
     }
 
     return 0;
@@ -407,319 +494,197 @@ int main() {
 
 ```C++
 #include <iostream>
-#include <algorithm>
 #include <string>
 
 using namespace std;
 ```
 
-Library iostream digunakan untuk menjalankan operasi input dan output pada program. #include <algorithm> dan #include <string> digunakan untuk menyediakan fungsi algoritma dan mengatur string lebih luas dan lebih mudah. Lalu namespace std dipanggil agar saat penulisan fungsi tidak perlu ditambahkan std lagi.
+Library iostream digunakan untuk menjalankan operasi input dan output pada program. #include <string> digunakan mengatur string lebih luas dan lebih mudah serta dapat dimanipulasi. Lalu namespace std dipanggil agar saat penulisan fungsi tidak perlu ditambahkan std lagi.
 
 #### Bagian 2
 
 ```C++
-bool binarySearch(const string& sentence, char target) {
-    int left = 0;
-    int right = sentence.length() - 1;
-    
-    while (left <= right) {
-        int mid = left + (right - left) / 2;
-
-        if (sentence[mid] == target) {
-            return true; // Huruf ditemukan
-        } else if (sentence[mid] < target) {
-            left = mid + 1; // Cari di sebelah kanan
-        } else {
-            right = mid - 1; // Cari di sebelah kiri
-        }
-    }
-
-    return false; // Huruf tidak ditemukan
-}
+const int MAX_BUKU = 5;
 ```
 
-Kode di atas merupakan fungsi binary search yang dapat menerima dua parameter yaitu sentence yang berupa kalimat dan target yang merupakan huruf yang akan dicari oleh pengguna. Pencarian dalam kode ini dengan cara mengurutkan huruf dalam sentence lalu mencari huruf dalam variabel target menggunakan binary search.
+Kode di atas mendeklarasikan konstanta MAX_BUKU yang mengizinkan maksimal buku di input sebanyak 5 buku.
+
 
 #### Bagian 3
 
 ```C++
-int main() {
-    string sentence;
-    char target;
+struct Buku {
+    string judul_buku;
+    string pengarang;
+    string penerbit;
+    int tebal_buku;
+    double harga_buku;
+    int tahun_terbit;
+};
+```
 
-    cout << "Masukkan kalimat: ";
-    getline(cin, sentence);
+Kode di atas mendeklarasikan sebuah struct dengan nama Buku dengan 6 anggotanya tentunya memiliki tipe data yang berbeda-beda. Variabel yang telah dideklarasikan dalam struct ini akan digunakan pada fungsi main dan diberi value oleh pengguna yang memberi inputan.
 
-    // Melakukan sorting pada kalimat untuk memastikan binary search dapat berfungsi
-    sort(sentence.begin(), sentence.end());
 
-    cout << "Masukkan huruf yang ingin dicari: ";
-    cin >> target;
+#### Bagian 4
 
-    // Menggunakan binary search untuk mencari huruf
-    if (binarySearch(sentence, target)) {
-        cout << "Huruf '" << target << "' ditemukan dalam kalimat." << endl;
-    } else {
-        cout << "Huruf '" << target << "' tidak ditemukan dalam kalimat." << endl;
-    }
-
-    return 0;
+```C++
+void tambahData(Buku &buku) {
+    cout << "Judul Buku: ";
+    getline(cin, buku.judul_buku);
+    cout << "Pengarang: ";
+    getline(cin, buku.pengarang);
+    cout << "Penerbit: ";
+    getline(cin, buku.penerbit);
+    cout << "Tebal Buku (halaman): ";
+    cin >> buku.tebal_buku;
+    cout << "Harga Buku: ";
+    cin >> buku.harga_buku;
+    cout << "Tahun Terbit: ";
+    cin >> buku.tahun_terbit;
+    cin.ignore(); // Membersihkan buffer input
 }
 ```
 
-Fungsi di atas merupakan fungsi main yang berupa fungsi utama di dalam progran. Fungsi ini akan meminta pengguna untuk memasukkan kalimat dengan fungsi getline lalu memasukkan huruf yang ingin di cari menggunakan cin. Sebelum melakukan pencarian, kode akan menggunakan fungsi sorting untuk mengurutkan kalimat, lalu fungsi binary search akan berjalan. Jika huruf yang dicari ada pada kalimat maka outputnya akan masuk ke if, jika tidak ditemukan maka akan mengeksekusi pada bagian else.
+Kode di atas mendeklarasikan fungsi dengan nama tambahData. Fungsi ini dibuat untuk memasukkan data buku ke dalam struct Buku. Dimana fungsi tambahData ini akan digunakan pada fungsi main untuk menerima inputan dari pengguna program.
+
+#### Bagian 5
+
+```C++
+int main() {
+    Buku daftar_buku[MAX_BUKU];
+
+    // Memasukkan data untuk setiap buku
+    for (int i = 0; i < MAX_BUKU; ++i) {
+        cout << "Masukkan data untuk Buku " << i + 1 << endl;
+        tambahData(daftar_buku[i]);
+        cout << endl;
+    }
+
+    // Menampilkan data buku yang telah dimasukkan
+    cout << "Data Buku:"<<endl<<endl;
+    for (int i = 0; i < MAX_BUKU; ++i) {
+        cout << "Daftar Buku ke-" << i + 1 << endl;
+        cout << "Judul: " << daftar_buku[i].judul_buku << endl;
+        cout << "Pengarang: " << daftar_buku[i].pengarang << endl;
+        cout << "Penerbit: " << daftar_buku[i].penerbit << endl;
+        cout << "Tebal Buku: " << daftar_buku[i].tebal_buku << " halaman" << endl;
+        cout << "Harga Buku: Rp" << daftar_buku[i].harga_buku << endl;
+        cout << "Tahun Terbit: " << daftar_buku[i].tahun_terbit << endl << endl;
+    }
+
+    return 0;
+```
+
+Fungsi di atas merupakan fungsi main yang berupa fungsi utama di dalam progran. Fungsi ini akan meminta pengguna untuk memasukkan value dari setiap variabel yang telah dideklarasikan. for (int i = 0; i < MAX_BUKU; ++i) { } digunakan untuk meminta pengguna memasukkan value hingga maksimal 5 buku sesuai batas yang ditetapkan. Pada kode berikutnya, programer membuat ouput yang sesuai dengan value yang dimasukkan oleh pengguna.
+
 
 **Output:**
 
 ```C++
-Masukkan kalimat: Rizal Wahyu Pratama
-Masukkan huruf yang ingin dicari: P
-Huruf 'P' ditemukan dalam kalimat.
+Masukkan data untuk Buku 1
+Judul Buku: Perjalanan Menuju Bintang
+Pengarang: Rizal Pratama
+Penerbit: Erlangga
+Tebal Buku (halaman): 172
+Harga Buku: 99000
+Tahun Terbit: 2024
+
+Masukkan data untuk Buku 2
+Judul Buku: Seorang Pria Pencari Kesalahan Wanita
+Pengarang: Wisnu Aji
+Penerbit: Erlangga
+Tebal Buku (halaman): 90
+Harga Buku: 169000
+Tahun Terbit: 2015
+
+Masukkan data untuk Buku 3
+Judul Buku: Seorang Kristen Pindah Muslim
+Pengarang: Mikhael
+Penerbit: Sinar Dunia
+Tebal Buku (halaman): 800
+Harga Buku: 400000
+Tahun Terbit: 2010
+
+Masukkan data untuk Buku 4
+Judul Buku: Perjalanan Menjadi Coach 
+Pengarang: Yoka
+Penerbit: Montoon
+Tebal Buku (halaman): 76
+Harga Buku: 50000
+Tahun Terbit: 2020
+
+Masukkan data untuk Buku 5
+Judul Buku: Cinta yang Tak Pernah ku Bayangkan
+Pengarang: Fahmi Hidayat
+Penerbit: PLH Entertain
+Tebal Buku (halaman): 200
+Harga Buku: 56000
+Tahun Terbit: 2023
+
+Data Buku:
+
+Daftar Buku ke-1
+Judul: Perjalanan Menuju Bintang
+Pengarang: Rizal Pratama
+Penerbit: Erlangga
+Tebal Buku: 172 halaman
+Harga Buku: Rp99000
+Tahun Terbit: 2024
+
+Daftar Buku ke-2
+Judul: Seorang Pria Pencari Kesalahan Wanita
+Pengarang: Wisnu Aji
+Penerbit: Erlangga
+Tebal Buku: 90 halaman
+Harga Buku: Rp169000
+Tahun Terbit: 2015
+
+Daftar Buku ke-3
+Judul: Seorang Kristen Pindah Muslim
+Pengarang: Mikhael
+Penerbit: Sinar Dunia
+Tebal Buku: 800 halaman
+Harga Buku: Rp400000
+Tahun Terbit: 2010
+
+Daftar Buku ke-4
+Judul: Perjalanan Menjadi Coach
+Pengarang: Yoka
+Penerbit: Montoon
+Tebal Buku: 76 halaman
+Harga Buku: Rp50000
+Tahun Terbit: 2020
+
+Daftar Buku ke-5
+Judul: Cinta yang Tak Pernah ku Bayangkan
+Pengarang: Fahmi Hidayat
+Penerbit: PLH Entertain
+Tebal Buku: 200 halaman
+Harga Buku: Rp56000
+Tahun Terbit: 2023
 ```
 
 #### Penjelasan
 
-Pada output di atas, pengguna memasukkan kalimat Rizal Wahyu Pratama dengan mencari huruf P. Karena huruf P ada di dalam kalimat maka outputnya adalah "Huruf 'P' ditemukan dalam kalimat".
+Pada output di atas, pengguna memasukkan value yang berbeda dari 5 buku. Mulai dari judul, pengarang, penerbit, tebal buku, harga buku, dan tahun terbit. Semua value yang dimasukkan akan keluar seperti output di atas sesuai dengan yang dideklarasikan pada fungsi main.
 
 #### Full code Screenshot:
 
 <p align="center">
-  <img src="https://github.com/rizaledc/Praktikum-Struktur-Data-Assigment-Modul-4/blob/main/Modul%204/Screenshot/Unguided1.png" alt="Alt Text">
+  <img src="https://github.com/rizaledc/Praktikum-Struktur-Data-Assigment-Modul-5/blob/main/Modul%205/SS/codeunguided1.png" alt="Alt Text">
 </p>
 
 #### Screenshot Output
 
 <p align="center">
-  <img src="https://github.com/rizaledc/Praktikum-Struktur-Data-Assigment-Modul-4/blob/main/Modul%204/Screenshot/OutUnGuid1.png" alt="Alt Text">
+  <img src="https://github.com/rizaledc/Praktikum-Struktur-Data-Assigment-Modul-5/blob/main/Modul%205/SS/OutPart1.png" alt="Alt Text">
 </p>
-
-### 2. Unguided 2
-
-#### Buatlah sebuah program yang dapat menghitung banyaknya huruf vocal dalam sebuah kalimat! 
-
-**Kode Program:**
-
-```C++
-#include <iostream>
-#include <string>
-#include <cctype>
-
-using namespace std;
-
-// Function to count the number of vowels in a sentence
-int countVowels(const string& sentence) {
-    int vowelCount = 0;
-
-    for (char c : sentence) {
-        // Convert character to lowercase
-        char lowercaseChar = tolower(c);
-
-        // Check if the character is a vowel
-        if (lowercaseChar == 'a' || lowercaseChar == 'i' || lowercaseChar == 'u' ||
-            lowercaseChar == 'e' || lowercaseChar == 'o') {
-            vowelCount++;
-        }
-    }
-
-    return vowelCount;
-}
-
-int main() {
-    string sentence;
-    cout << "Enter a sentence: ";
-    getline(cin, sentence);
-    int numVowels = countVowels(sentence);
-
-    cout << "The number of vowels in the sentence is: " << numVowels << endl;
-
-    return 0;
-}
-```
-
-**Penjelasan:**
-
-#### Bagian 1
-
-```C++
-#include <iostream>
-#include <string>
-#include <cctype>
-
-using namespace std;
-```
-
-Dalam kode di atas kita akan menggunakan 2 library yaitu **<iostream>** untuk input dan output, #include <cctype> digunakan untuk mengevaluasi dan memanipulasi karakter, serta **<string>** untuk membebaskan dalam penggunaan tipe data string. Lalu namespace **std** dipanggil agar saat penulisan fungsi tidak perlu ditambahkan std lagi.
-
-#### Bagian 2
-
-```C++
-// Function to count the number of vowels in a sentence
-int countVowels(const string& sentence) {
-    int vowelCount = 0;
-
-    for (char c : sentence) {
-        // Convert character to lowercase
-        char lowercaseChar = tolower(c);
-
-        // Check if the character is a vowel
-        if (lowercaseChar == 'a' || lowercaseChar == 'i' || lowercaseChar == 'u' ||
-            lowercaseChar == 'e' || lowercaseChar == 'o') {
-            vowelCount++;
-        }
-    }
-
-    return vowelCount;
-}
-```
-
-Kode di atas merupakan fungsi untuk menghitung jumlah huruf vokal yang ada pada kalimat yang diberikan. Menggunakan sentence yang merupakan kalimat yang akan dianalisis dan mengubahnya semua ke dalam huruf kecil menggunakan tolower(), jika ada huruf vokal dalam kalimat maka akan ditambahkan ke vowelcount.
-
-#### Bagian 3
-
-```C++
-int main() {
-    string sentence;
-    cout << "Enter a sentence: ";
-    getline(cin, sentence);
-    int numVowels = countVowels(sentence);
-
-    cout << "The number of vowels in the sentence is: " << numVowels << endl;
-
-    return 0;
-}
-```
-
-Kode di atas merupakan kode yang digunakan untuk membuat fungsi main. Fungsi main ini merupakan kode yang pertama kali akan dieksekusi dalam menjalankan sebuah program. Pertama-tama pengguna akan diminta untuk memasukkan kalimat dengan menggunakan getline(). Lalu memanggil fungsi countVowels untuk menghitung banyaknya huruf vokal dari kalimat yang dimasukkan pengguna. Lalu hasilnya akan muncul menggunakan cout.
-
-**Output:**
-
-```C++
-Enter a sentence: Rizal Wahyu Pratama
-The number of vowels in the sentence is: 7
-```
-
-#### Penjelasan
-
-Pada output di atas pengguna memasukkan kalimat Rizal Wahyu Pratama, karena dalam kalimat ini terdapat 7 huruf vokal maka program tadi memunculkan outputnya berupa "The number of vowels in the sentence is: 7"
-
-#### Full code Screenshot:
-
 <p align="center">
-  <img src="https://github.com/rizaledc/Praktikum-Struktur-Data-Assigment-Modul-4/blob/main/Modul%204/Screenshot/Unguided2.png" alt="Alt Text">
+  <img src="https://github.com/rizaledc/Praktikum-Struktur-Data-Assigment-Modul-5/blob/main/Modul%205/SS/OutPart2.png" alt="Alt Text">
 </p>
 
-#### Screenshot Output
-
-<p align="center">
-  <img src="https://github.com/rizaledc/Praktikum-Struktur-Data-Assigment-Modul-4/blob/main/Modul%204/Screenshot/OutUnGuid2.png" alt="Alt Text">
-</p>
-
-### 3. Unguided 3
-
-#### Diketahui data = 9, 4, 1, 4, 7, 10, 5, 4, 12, 4. Hitunglah berapa banyak angka 4 dengan menggunakan algoritma Sequential Search!
-
-**Kode Program:**
-
-```C++
-#include <iostream>
-#include <vector>
-
-using namespace std;
-
-// Function to count the occurrences of a number in a vector using Sequential Search
-int countOccurrences(const vector<int>& data, int target) {
-    int count = 0;
-
-    for (int num : data) {
-        if (num == target) {
-            count++;
-        }
-    }
-
-    return count;
-}
-
-int main() {
-    vector<int> data = {9, 4, 1, 4, 7, 10, 5, 4, 12, 4};
-    int target = 4;
-
-    int numOccurrences = countOccurrences(data, target);
-
-    cout << "The number of occurrences of " << target << " in the data is: " << numOccurrences << endl;
-
-    return 0;
-}
-```
-
-**Penjelasan:**
-
-#### Bagian 1
-
-```C++
-#include <iostream>
-#include <vector>
-
-using namespace std;
-```
-
-Dalam kode di atas kita akan menggunakan 3 library yaitu **<iostream>** untuk input dan output, **<vector>** untuk membebaskan dalam penggunaan vector dalam pengurutan. Lalu namespace **std** dipanggil agar saat penulisan fungsi tidak perlu ditambahkan std lagi.
-
-#### Bagian 2
-
-```C++
-int countOccurrences(const vector<int>& data, int target) {
-    int count = 0;
-
-    for (int num : data) {
-        if (num == target) {
-            count++;
-        }
-    }
-
-    return count;
-}
-```
-
-Pada kode di atas akan menerima dua argumen yaitu data yang berupa vektor yang berisi data integer. Lalu terdapat target yang merupakan angka yang akan dicari dalam data. Pada fungsi ini program menggunakan algoritma Sequential Search untuk mencari angka di dalam vektor data yang sesuai dengan angka pada target. Jika ada angka yang cocok, maka akan dimasukkan ke variabel count yang akan mengembalikan jumlah angka yang muncul ke vektor data.
-
-#### Bagian 3
-
-```C++
-int main() {
-    vector<int> data = {9, 4, 1, 4, 7, 10, 5, 4, 12, 4};
-    int target = 4;
-
-    int numOccurrences = countOccurrences(data, target);
-
-    cout << "The number of occurrences of " << target << " in the data is: " << numOccurrences << endl;
-
-    return 0;
-}
-```
-
-Pada fungsi main di atas merupakan fungsi yang akan di eksekusi pertama, dimana terdapat vektor data yang akan diinisiasi dengan data yang telah dimasukkan. Berikutnya fungsi cout0ccourrences, data, dan target dipanggil ke dalam kode. Lalu hasil yang telah diperoleh dari pemanggilan fungsi ini akan dimunculkan sebagai output dengan cout.
-
-**Output:**
-
-```C++
-The number of occurrences of 4 in the data is: 4
-```
-
-#### Penjelasan
-
-Pada output di atas karena kita mencari angka 4 pada data yang diberikan, maka program akan mencari banyaknya angka 4. Pada data yang diberikan terdapat 4 angka 4 maka outputnya adalah The number of occurrences of 4 in the data is: 4.
-
-#### Full code Screenshot:
-
-<p align="center">
-  <img src="https://github.com/rizaledc/Praktikum-Struktur-Data-Assigment-Modul-4/blob/main/Modul%204/Screenshot/Unguided3.png" alt="Alt Text">
-</p>
-
-#### Screenshot Output
-
-<p align="center">
-  <img src="https://github.com/rizaledc/Praktikum-Struktur-Data-Assigment-Modul-4/blob/main/Modul%204/Screenshot/OutUnGuid3.png" alt="Alt Text">
-</p>
+NB : Screenshot terlalu panjang, oleh karena itu screenshot dibagi menjadi dua bagian.
 
 ## Kesimpulan
 
