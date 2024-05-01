@@ -1,6 +1,7 @@
 # <h1 align="center">Laporan Praktikum Modul Struct dan Implementasi</h1>
 <p align="center">Rizal Wahyu Pratama</p>
 <p align="center">2311110029</p>
+<p align="center">S1SD-04-B</p>
 
 ## Tujuan Praktikum
 
@@ -10,9 +11,9 @@
 
 ## Dasar Teori
 
-Mata kuliah algoritma dan struktur data merupakan salah satu mata kuliah yang diajarkan pada banyak program studi ilmu komputer dan data (Arif Aliyanto). Struktur dari data cukup abstrak sehingga cukup sulit untuk dipahami oleh manusia, oleh karena itu kita dapat mengoperasikannya dalam sebuah pemrograman komputer. Untuk mengoperasikannya di dalam komputer, kita harus memahami apa itu algoritma dan struktur atau struct. 
+Mata kuliah algoritma dan struktur data merupakan salah satu mata kuliah yang diajarkan pada banyak program studi ilmu komputer dan data [2]. Struktur dari data cukup abstrak sehingga cukup sulit untuk dipahami oleh manusia, oleh karena itu kita dapat mengoperasikannya dalam sebuah pemrograman komputer. Untuk mengoperasikannya di dalam komputer, kita harus memahami apa itu algoritma dan struktur atau struct. 
 
-Pemrograman adalah komponen-komponen yang berkaitan dalam proses pembuatan program, misalnya seperti langkah, bahasa, tahapan pembuatan (Cici Wulandari). Dalam konteks pemrograman, struct merupakan tipe data bentukan yang terdiri dari beberapa tipe data standar atau tipe dengan bentuk lainnya. Untuk mendeklarasikan struktur kita dapat menggunakan berbagai bahasa pemrograman, seperti C++. Dimana bahasa pemrograman C++ ini merupakan hybrid dari bahasa C (Luh Joni Erawati). Untuk menggunakan struct kita dapat menggunakan berbagai kode diantaranya:
+Pemrograman adalah komponen-komponen yang berkaitan dalam proses pembuatan program, misalnya seperti langkah, bahasa, tahapan pembuatan [1]. Dalam konteks pemrograman, struct merupakan tipe data bentukan yang terdiri dari beberapa tipe data standar atau tipe dengan bentuk lainnya. Untuk mendeklarasikan struktur kita dapat menggunakan berbagai bahasa pemrograman, seperti C++. Dimana bahasa pemrograman C++ ini merupakan hybrid dari bahasa C [3]. Untuk menggunakan struct kita dapat menggunakan berbagai kode diantaranya:
 
 ```C++
 //Contoh Struct 1
@@ -55,7 +56,7 @@ Dari ketiga contoh struct di atas, kita dapat memilihnya salah satu sesuai denga
 
 ### 1. Guided 1
 
-#### 
+#### Buatlah sebuah struktur dengan nama buku yang berisi judul_buku, pengarang, penerbit, tebal_halaman, harga_buku. Isi dengan nilai kemudian tampilkan.
 
 ```C++
 #include <iostream>
@@ -204,7 +205,7 @@ Program di atas akan mengeluarkan output pesan yang menyatakan informasi dari bu
 
 ### 2. Guided 2
 
-#### 
+#### Buatlah sebuah struktur dengan skema seperti dibawah, isi dengan nilai kemudian jalankan. 
 
 ```C++
 #include <iostream>
@@ -424,7 +425,7 @@ Sesuai dengan fungsi main, output di atas urutannya telah di atur dalam fungsi m
 
 ### 1. Unguided 1
 
-#### 
+#### Modifikasi tugas guided pertama, sehingga setiap item yang terdapat pada struct buku berupa array yang berukuran 5, isi dengan data kemudian tampilkan.
 
 **Kode Program:**
 
@@ -686,18 +687,30 @@ Pada output di atas, pengguna memasukkan value yang berbeda dari 5 buku. Mulai d
 
 NB : Screenshot terlalu panjang, oleh karena itu screenshot dibagi menjadi dua bagian.
 
+
+### 2. Unguided 2
+
+#### Apa yang terjadi jika deklarasi variabel struct yang dibuat pada tugas guided I, berjenis Array. Bagaimana cara mengisi data dan menampilkannya ? 
+
+a. Jika deklarasi variabel struct pada guided 1 beripe array, dimana contohnya adalah Buku daftar_buku[MAX_BUKU] maka kita telah membuat array dari struktur buku dengan ukurannya yaitu MAX_BUKU yang dapat menyimpan buku hingga 5 jenis buku. 
+
+b. Cara mengisi datanya sangatlah mudah, fungsi tambahData akan menerima objek Buku, lau digunakan sebuah looping for disetiap elemen dalam array daftar_buku. Berikutnya terdapat fungsi tambahData yang meminta pengguna kode untuk memasukkan judul buku, pengarang, penerbit, tebal buku, harga buku, dan tahun terbit yang disimpan dalam objek Buku. 
+
+c. Untuk menampilkan datanya, digunakan looping for yang akan melakukan perulangan dalam elemen di dalam array daftar_buku. Kemudian, program akan mencetak setiap value yang diinputkan pada setiap variabel Buku.
+
 ## Kesimpulan
 
-Algoritma searching merupakan salah satu algoritma yang sering digunakan dalam pemrograman. Karena, dengan menggunakan algoritma searching ini seorang programer dapat dengan mudah membuat program yang efisien untuk mencari dan menemukan nilai dalam kumpulan data. Dalam algoritma searching, terdapat dua algoritma yaitu Sequentual Search dan Binary Search. Dimana sequential searching adalah pencarian data semantik menggunakan teknologi array satu dimensi untuk melakukan proses pencarian tanpa  melalui semua elemen array secara berurutan, sehingga tidak perlu dilakukan pengurutan data terlebih dahulu. 
+Pemrograman merupakan sebuah proses dalam pembuat program sebuah komputer. Dalam pembuatan program ini tentunya seorang programer harus memilih salah satu dari banyak bahasa pemrograman, salah satunya C++. Dalam bahasa pemrograman C++ terdapat Struct yang memungkinkan seseorang untuk membuat tipe data baru yang terdiri dari beberapa tipe data standar atau tipe data bentukan lainnya. 
 
-Berikutnya, binary search yang merupakan algoritma yang cara kerjanya adalah membagi array menjadi dua bagian dengan mencari nilai tengahnya, lalu membandingkan nilai tengahnya dengan nilai yang dicari. Jika nilai yang dicari sesuai dengan nilai tengah maka program akan selesai. Jika nilai dicari tidak sama dengan nilai tengah, maka algoritma akan melihat apakah nilai yang dicari lebih kecil dari nilai tengah atau lebih besar. Jika lebih kecil dari nilai tengah, maka bagian kanan data akan dihirauhkan dan mengecek hanya bagian kirinya, begitu pula dengan sebaliknya. Hal ini akan dilakukan hingga nilai ditemukan atau array telah habis dicek.
+Dalam bahasa pemrograman C++, struct dapat mempermudah dan memungkinkan programer untuk mengatur dan mengelola data dengan lebih baik. Tentunya, dengan algoritma yang tepat dalam penulisan struct dapat memberikan kemudahan dan meningkatkan efisiensi perangkat lunak.
 
 ## Referensi
 
-[1]	L. H. Atrinawati, “Analisis Kompleksitas Algoritma untuk Berbagai Macam Metode Pencarian Nilai (Searching) dan Pengurutan Nilai (Sorting) pada Tabel,” Progr. Stud. Tek. Inform., pp. 1–13.
 
-[2] M. Utami and Y. Apridiansyah, "Implementasi Algoritma Sequential Searching Pada Sistem Pelayanan Puskesmas Menggunakan Bootstrap (Studi Kasus Puskesmas Kampung Bali Bengkulu)," Journal Scientific and Applied Informatics (JSAI), vol. 2, no. 2614-3062, 2019.
+[1]	C. W. SItorus, “PENERAPAN DAN FUNGSI ALGORITMA PEMROGRAMAN,” Вестник Росздравнадзора, vol. 4, no. 1, pp. 9–15, 2017.
 
-[3]	I. H. Mulyana and M. Rifqi, “Implementasi Algoritma Binary Tree dan Sequential Searching pada Aplikasi Web Multilevel Marketing,” J. Inform. J. Pengemb. IT, vol. 5, no. 3, pp. 83–87, 2020, doi:10.30591/jpit.v5i3.2087.
+[2]	A. Aliyanto, S. Utomo, and S. Santosa, “Sistem Pembelajaran Algoritma Stack Dan Queue Dengan Pendekatan Program Based Learning,” J. Teknol. Inf., vol. 7, no. 1, pp. 17–18, 2011.
 
-[4]	W. S. Wahyuni, S. Andryana, and B. Rahman, “Penggunaan Algoritma Sequential Searching Pada Aplikasi Perpustakaan Berbasis Web,” JIPI (Jurnal Ilm. Penelit. dan Pembelajaran Inform., vol. 7, no. 2, pp.294–302, 2022, doi: 10.29100/jipi.v7i2.2646.
+[3]	L. J. E. Dewi, “MEDIA PEMBELAJARAN BAHASA PEMROGRAMAN C++,” Rev. Bras. Linguística Apl., vol. 5, no. 1, pp. 1689–1699, 2016, [Online].
+
+
